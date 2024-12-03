@@ -21,4 +21,5 @@ public class Book {
     private String author;
     private Double price;
     private UUID categoryId;
+    private Integer remainingQuantity;
 }

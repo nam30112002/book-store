@@ -1,25 +1,20 @@
-package com.bookstore.entity;
+package com.bookstore.dto;
 
-import jakarta.persistence.*;
+import com.bookstore.entity.OrderInfo;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.UUID;
+import java.util.List;
 
-@Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "orders")
-public class Order {
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+public class OrderDTO {
     private String customerName;
     private String shippingAddress;
-    private Double totalPrice;
     private Boolean isPaid;
+    private List<OrderInfo> orderInfoList;
 }
